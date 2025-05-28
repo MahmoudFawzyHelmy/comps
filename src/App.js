@@ -1,33 +1,29 @@
-import Button from './Button';
+import Accordion from "./components/Accordion";
 
-function App() {
+export default function App() {
+  const items = [
+    {
+      id: "12wd",
+      label: "Can i use react in project",
+      content:
+        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+    },
+    {
+      id: "eef2",
+      label: "Can i use js in project",
+      content:
+        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+    },
+    {
+      id: "dfwf",
+      label: "Can i use css in project",
+      content:
+        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+    },
+  ];
   return (
     <div>
-      <div>
-        <Button success rounded outline>
-          Click me!!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>See Deal!</Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          Something!
-        </Button>
-      </div>
+      <Accordion items={items} />
     </div>
   );
 }
-
-export default App;
