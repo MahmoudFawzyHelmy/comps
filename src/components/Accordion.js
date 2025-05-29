@@ -3,7 +3,13 @@ import { FaAngleDown, FaAngleLeft } from "react-icons/fa";
 export default function Accordion({ items }) {
   const [expaneded, setExapanded] = useState(0);
   const handleClick = (nextIndex) => {
-    setExapanded(nextIndex);
+    setExapanded((current) => {
+      if (current === nextIndex) {
+        return -1;
+      } else {
+        setExapanded(nextIndex);
+      }
+    });
   };
   const rendredItems = items.map((item, index) => {
     const isExpanded = index === expaneded;
