@@ -1,51 +1,44 @@
-import Button from "../components/Button";
-import {
-  BsAlarmFill,
-  BsApple,
-  BsArrowDownSquareFill,
-  BsArrowRepeat,
-  BsBellFill,
-} from "react-icons/bs";
+import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go';
+import Button from '../components/Button';
 
 function ButtonPage() {
   const handleClick = () => {
-    alert("Hello");
+    console.log('Clicked!');
   };
+
   return (
     <div>
       <div>
         <Button
-          success
-          rounded
+          secondary
           outline
-          className="mb-2 mt-3  "
+          rounded
+          className="mb-5"
           onClick={handleClick}
         >
-          <BsBellFill />
+          <GoBell />
           Click me!!
         </Button>
       </div>
       <div>
-        <Button danger outline>
-          <BsAlarmFill />
+        <Button danger outline onMouseEnter={handleClick}>
+          <GoCloudDownload />
           Buy Now!
         </Button>
       </div>
       <div>
-        <Button warning>
-          <BsApple />
+        <Button warning onMouseLeave={handleClick}>
+          <GoDatabase />
           See Deal!
         </Button>
       </div>
       <div>
         <Button secondary outline>
-          <BsArrowDownSquareFill />
           Hide Ads!
         </Button>
       </div>
       <div>
         <Button primary rounded>
-          <BsArrowRepeat />
           Something!
         </Button>
       </div>

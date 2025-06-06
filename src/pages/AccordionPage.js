@@ -1,29 +1,28 @@
-import Accordion from "../components/Accordion";
+import Accordion from '../components/Accordion';
 
-export default function AccordionPage() {
+function AccordionPage() {
   const items = [
     {
-      id: "12wd",
-      label: "Can i use react in project",
+      id: 'l2kj5',
+      label: 'Can I use React on a project?',
       content:
-        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
-      id: "eef2",
-      label: "Can i use js in project",
+      id: 'lk2j35lkj',
+      label: 'Can I use Javascript on a project?',
       content:
-        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
-      id: "dfwf",
-      label: "Can i use css in project",
+      id: 'l1kj2i0g',
+      label: 'Can I use CSS on a project?',
       content:
-        "yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project yes u can use react in our project ",
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
   ];
-  return (
-    <div>
-      <Accordion items={items} />
-    </div>
-  );
+
+  return <Accordion items={items} />;
 }
+
+export default AccordionPage;

@@ -1,53 +1,62 @@
-import { useState, useRef, useEffect } from "react";
-import { GoChevronDown, GoChevronLeft } from "react-icons/go";
-import Panel from "./Panel";
+import { useState, useEffect, useRef } from 'react';
+import { GoChevronDown } from 'react-icons/go';
+import Panel from './Panel';
 
-export default function DropDown({ options, value, onChange }) {
+function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
-  const divRef = useRef();
+  const divEl = useRef();
+
   useEffect(() => {
     const handler = (event) => {
-  if(divRef.current && 
-     !divRef.current.contains(event.target)) {
+      if (!divEl.current) {
+        return;
+      }
+
+      if (!divEl.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
-    document.addEventListener("click", handler), true;
+
+    document.addEventListener('click', handler, true);
+
     return () => {
-      document.removeEventListener("click", handler, true);
+      document.removeEventListener('click', handler);
     };
-  });
+  }, []);
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
   const handleOptionClick = (option) => {
     setIsOpen(false);
     onChange(option);
   };
 
-  const renderedOprtions = options.map((option, index) => {
+  const renderedOptions = options.map((option) => {
     return (
       <div
-        className="hover:bg-sky-100 rounded curosor-pointer p-1"
-        key={index}
+        className="hover:bg-sky-100 rounded cursor-pointer p-1"
         onClick={() => handleOptionClick(option)}
+        key={option.value}
       >
         {option.label}
       </div>
     );
   });
+
   return (
-    <div className="w-48 relative" ref={divRef}>
+    <div ref={divEl} className="w-48 relative">
       <Panel
-        className="flex justify-between items-center curosor-pointer "
+        className="flex justify-between items-center cursor-pointer"
         onClick={handleClick}
       >
-        {value?.label || "Select..."}
-        {isOpen ? <GoChevronDown /> : <GoChevronLeft />}
+        {value?.label || 'Select...'}
+        <GoChevronDown className="text-lg" />
       </Panel>
-      {isOpen && (
-        <Panel className="absolute top-full ">{renderedOprtions}</Panel>
-      )}
+      {isOpen && <Panel className="absolute top-full">{renderedOptions}</Panel>}
     </div>
   );
 }
+
+export default Dropdown;
