@@ -3,6 +3,7 @@ import Sidbar from "./components/Sidbar";
 import AccordionPage from "./pages/AccordionPage";
 import ButtonPage from "./pages/ButtonPage";
 import CounterPage from "./pages/CounterPage";
+import CountPage from "./pages/countPage";
 import DropdownPage from "./pages/DropdownPage";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/counter'>
           <CounterPage/>
+        </Route>
+        <Route path="/count">
+          <CountPage/>
         </Route>
       </div>
     </div>

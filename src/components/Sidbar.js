@@ -7,7 +7,8 @@ export default function Sidbar() {
     { label: "Buttons", path: "/buttons" },
     { label: "Modal", path: "/modal" },
     { label: "Table", path: "/table" },
-    { label: "Counter", path:"/counter"}
+    { label: "Counter", path: "/counter" },
+    {label :"count" , path:"/count"}
   ];
   const renderLinks = links.map((link) => {
     return (
